@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   test_operation.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 19:52:17 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/29 20:21:07 by akisuzuk         ###   ########.fr       */
+/*   Created: 2023/03/29 20:46:03 by akisuzuk          #+#    #+#             */
+/*   Updated: 2023/03/29 20:47:12 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "get_next_line.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
-# include <math.h>
-# include <limits.h>
-# include <stdbool.h>
-# include <stdarg.h>
+int	main(int argc, char **argv)
+{
+	int		fd;
 
-//open用
-# include <fcntl.h>
-
-#endif //__INCLUDE_LIBFT_H__
+	if (argc != 2)
+		return (0);
+	else
+	{
+		// 読み込み専用
+		fd = open(argv[1], O_RDONLY);
+		get_next_line(fd);
+		close(fd);
+		return (0);
+	}
+}
