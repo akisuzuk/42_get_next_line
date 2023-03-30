@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:52:17 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/29 20:21:07 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/30 23:20:57 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+// read write close用
 # include <unistd.h>
 # include <string.h>
 # include <math.h>
