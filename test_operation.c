@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:03 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/30 23:31:47 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/03/31 09:59:58 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int main()
     int        fd;
     char    *line;
 
-    fd = open("./test/first_file", O_RDONLY);
+    fd = open("./text.txt", O_RDONLY);
     while (1)
     {
         line = get_next_line(fd);
