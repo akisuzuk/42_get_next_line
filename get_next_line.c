@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/03/29 23:54:16 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/01 17:56:28 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,33 @@
 // にしても、readの特性とか事前にわかってると課題の理解が早い！
 // printfの時はvar arg理解すんのに数日かかったからな...
 
+
+// headの中身をチェックして、read関数打つかを決める
+// lineとかhaedに文字列格納する時も、いちいちtempに入れる
+
 #include "get_next_line.h"
+
+int	search_newline()
+{
+	int	index;
+
+	return (index);
+}
+
 
 char	*get_next_line(int fd)
 {
-	char	*line;
-	char	buf[BUFSIZE];
-	int		word;
-	int		wordcnt;
+	char		*line;
+	static char	*head;
+	char		*buf
+
+	//char	*line;
+	//char	buf[BUFSIZE];
+	//int		word;
+	//int		wordcnt;
+
+	buf = (char *)malloc(BUFFER_SIZE + 1);
+
 
 	wordcnt = 0;
 	while (1)
