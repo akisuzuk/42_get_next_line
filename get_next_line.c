@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/01 17:56:28 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/02 13:17:44 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,55 +32,96 @@
 // headの中身をチェックして、read関数打つかを決める
 // lineとかhaedに文字列格納する時も、いちいちtempに入れる
 
+// コンパイル例
+// -Dオプションは" -D マクロ名=定義内容"でマクロを設定できるオプション
+// cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 <files>.c
+// ヘッダーとかファイル冒頭で #define BUFFE_SIZE=42 とかやっても同じ
+
 #include "get_next_line.h"
 
-int	search_newline()
+int	search_kaigyo()
 {
 	int	index;
 
-	return (index);
+	return (flag);
 }
-
 
 char	*get_next_line(int fd)
 {
 	char		*line;
 	static char	*head;
 	char		*buf
-
-	//char	*line;
-	//char	buf[BUFSIZE];
-	//int		word;
-	//int		wordcnt;
+	char		*temp;
+	char		*word;
+	int			cnt;
+	int			i;
 
 	buf = (char *)malloc(BUFFER_SIZE + 1);
-
-
-	wordcnt = 0;
-	while (1)
+	word = read(fd, buf, BUFFER_SIZE);
+	if (word == NULL)
+		return (NULL);
+	buf[BUFFER_SIZE] = '\0';
+	cnt = 0;
+	while (buf[cnt] != '\0')
 	{
-		word = read(fd, buf, 1);
-		if (word == 0)
-			return (NULL);
-		if (ft_strcmp(buf, "\n") == 0)
+		if (ft_strcmp(buf[cnt], "\n") == 0)
 		{
-			line = (char *)malloc(sizeof(char) * (wordcnt + 1));
-			break ;
+			line = (char *)malloc(sizeof(char) * (cnt + 1));
+			//if (line == NULL)
+			//	return (NULL);
+			i = 0;
+			while (i < cnt)
+			{
+				line[i] == buf[i]
+				i++;
+			}
+			line[i] = '\0';
+			if (cnt <= BUFFER_SIZE)
+			{
+				head = (char *)malloc(BUFFER_SIZE - cnt);
+				//if (head == NULL)
+				//	return (NULL);
+				i = 0;
+				while (buf[cnt] != '\0')
+				{
+					head[i] = buf[cnt];
+					i++;
+					cnt++;
+				}
+			}
+			return (line);
 		}
-		wordcnt++;
-	}
-	close(fd);
-	wordcnt = 0;
-	while (1)
-	{
-		word = read(fd, buf, 1);
-		if (ft_strcmp(buf, "\n") == 0)
-		{
-			line[wordcnt] = '\0';
-			break ;
-		}
-		line[wordcnt] = *buf;
-		wordcnt++;
+		cnt++;
 	}
 	return (line);
 }
+
+
+
+// 	while (1)
+// 	{
+// 		word = read(fd, buf, BUFFER_SIZE);
+// 		if (word == NULL)
+// 			return (NULL);
+// 		if (ft_strcmp(buf, "\n") == 0)
+// 		{
+// 			line = (char *)malloc(sizeof(char) * (wordcnt + 1));
+// 			break ;
+// 		}
+// 		wordcnt++;
+// 	}
+// 	close(fd);
+// 	wordcnt = 0;
+// 	while (1)
+// 	{
+// 		word = read(fd, buf, 1);
+// 		if (ft_strcmp(buf, "\n") == 0)
+// 		{
+// 			line[wordcnt] = '\0';
+// 			break ;
+// 		}
+// 		line[wordcnt] = *buf;
+// 		wordcnt++;
+// 	}
+// 	return (line);
+// }
