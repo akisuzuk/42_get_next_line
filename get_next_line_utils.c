@@ -6,60 +6,33 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:08:56 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/04 21:44:27 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/04 23:03:12 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static	char	*store(char const *pre, char const *suf, char *ret);
-
-int	*ft_strchr_index(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	char	char_c;
-	int		index;
-
-	char_c = (char)c;
-	while (*s)
-	{
-		if (*s == char_c)
-			return (index);
-		s++;
-		index++;
-	}
-	if (char_c == '\0' && *s == char_c)
-		return (index);
-	return (0);
-}
-
-size_t	ft_strlen(const char *s)
-{
+	size_t	slen;
+	char	*ret;
 	size_t	i;
 
-	i = 0;
-	while (s[i] != '\0')
+	slen = 0;
+	while (s1[slen] != '\0')
 	{
+		slen++;
+	}
+	ret = (char *)malloc((slen + 1) * sizeof(char));
+	if (ret == NULL)
+		return (NULL);
+	i = 0;
+	while (i <= slen)
+	{
+		ret[i] = s1[i];
 		i++;
 	}
-	return (i);
-}
-
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
-	int	diff;
-
-	i = 0;
-	while (1)
-	{
-		if (s1[i] == '\0' && s2[i] == '\0')
-			return (0);
-		diff = s1[i] - s2[i] - 0;
-		if (diff != 0)
-			return (diff);
-		i++;
-	}
-	return (0);
+	return (ret);
 }
 
 static	char	*store(char const *pre, char const *suf, char *ret)
@@ -85,6 +58,18 @@ static	char	*store(char const *pre, char const *suf, char *ret)
 	return (ret);
 }
 
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ret;
@@ -101,4 +86,23 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ret = store(s1, s2, ret);
 	ret[prelen + suflen] = '\0';
 	return (ret);
+}
+
+int	ft_strchr_index(const char *s, int c)
+{
+	char	char_c;
+	int		index;
+
+	index = 0;
+	char_c = (char)c;
+	while (*s)
+	{
+		if (*s == char_c)
+			return (index);
+		s++;
+		index++;
+	}
+	if (char_c == '\0' && *s == char_c)
+		return (index);
+	return (index);
 }

@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/04 21:57:13 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/04 23:04:31 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@
 // にしても、readの特性とか事前にわかってると課題の理解が早い！
 // printfの時はvar arg理解すんのに数日かかったからな...
 
-
 // headの中身をチェックして、read関数打つかを決める
 // lineとかhaedに文字列格納する時も、いちいちtempに入れる
 
@@ -43,6 +42,8 @@
 // 1:改行が見つかってないので続けてサーチする
 // 0:改行が見つかったのでget_next_line終了
 // -1:終端文字まで行ったので全てのプロセス終了
+
+// cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 test_operation.c get_next_line.c get_next_line_utils.c
 
 #include "get_next_line.h"
 
@@ -83,7 +84,7 @@ char	*get_next_line(int fd)
 	search_flag = 0;
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	*line = (char *)malloc(1);
+	line = (char *)malloc(1);
 	if (line == NULL)
 		return (NULL);
 	*line = '\0';
@@ -92,8 +93,12 @@ char	*get_next_line(int fd)
 	buf = (char *)malloc(BUFFER_SIZE + 1);
 	if (buf == NULL)
 		search_flag = 0;
-	while (search_flag == 1 && read(fd, buf, BUFFER_SIZE) > 0)
+	while (search_flag == 1)
 	{
+		// read関数の返り値は読み込んだバイト数
+		n = read(0, buf, BUFFER_SIZE);
+		if (n <= 0)
+			break ;
 		buf[n] = '\0';
 		search_flag = search_kaigyo(line, head, buf);
 	}
@@ -106,33 +111,3 @@ char	*get_next_line(int fd)
 	}
 	return (line);
 }
-
-
-
-// 	while (1)
-// 	{
-// 		word = read(fd, buf, BUFFER_SIZE);
-// 		if (word == NULL)
-// 			return (NULL);
-// 		if (ft_strcmp(buf, "\n") == 0)
-// 		{
-// 			line = (char *)malloc(sizeof(char) * (wordcnt + 1));
-// 			break ;
-// 		}
-// 		wordcnt++;
-// 	}
-// 	close(fd);
-// 	wordcnt = 0;
-// 	while (1)
-// 	{
-// 		word = read(fd, buf, 1);
-// 		if (ft_strcmp(buf, "\n") == 0)
-// 		{
-// 			line[wordcnt] = '\0';
-// 			break ;
-// 		}
-// 		line[wordcnt] = *buf;
-// 		wordcnt++;
-// 	}
-// 	return (line);
-// }
