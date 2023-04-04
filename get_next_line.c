@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/02 13:17:44 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/04 21:57:13 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,61 +37,72 @@
 // cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 <files>.c
 // ヘッダーとかファイル冒頭で #define BUFFE_SIZE=42 とかやっても同じ
 
+// mallocした奴らは必ずfreeしないといけないので、malloc直後にtempに入れてtempで運用する
+
+// フラグは
+// 1:改行が見つかってないので続けてサーチする
+// 0:改行が見つかったのでget_next_line終了
+// -1:終端文字まで行ったので全てのプロセス終了
+
 #include "get_next_line.h"
 
-int	search_kaigyo()
+int	search_kaigyo(char *line, char *head, char *buf)
 {
-	int	index;
+	int		index;
+	int		search_flag;
+	char	*temp;
 
-	return (flag);
+	index = ft_strchr_index(buf, '\n');
+	temp = ft_strjoin(line, buf);
+	if (temp == NULL)
+		search_flag = -1;
+	free(line);
+	line = temp;
+	temp = NULL;
+	search_flag = 1;
+	if (buf[index] == '\n')
+	{
+		temp = ft_strdup(buf + index + 1);
+		if (temp == NULL)
+			search_flag = -1;
+		search_flag = 0;
+	}
+	free(head);
+	head = temp;
+	return (search_flag);
 }
 
 char	*get_next_line(int fd)
 {
 	char		*line;
 	static char	*head;
-	char		*buf
-	char		*temp;
-	char		*word;
-	int			cnt;
-	int			i;
+	char		*buf;
+	int			search_flag;
+	size_t		n;
 
-	buf = (char *)malloc(BUFFER_SIZE + 1);
-	word = read(fd, buf, BUFFER_SIZE);
-	if (word == NULL)
+	search_flag = 0;
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	buf[BUFFER_SIZE] = '\0';
-	cnt = 0;
-	while (buf[cnt] != '\0')
+	*line = (char *)malloc(1);
+	if (line == NULL)
+		return (NULL);
+	*line = '\0';
+	if (head)
+		search_flag = search_kaigyo(line, head, head);
+	buf = (char *)malloc(BUFFER_SIZE + 1);
+	if (buf == NULL)
+		search_flag = 0;
+	while (search_flag == 1 && read(fd, buf, BUFFER_SIZE) > 0)
 	{
-		if (ft_strcmp(buf[cnt], "\n") == 0)
-		{
-			line = (char *)malloc(sizeof(char) * (cnt + 1));
-			//if (line == NULL)
-			//	return (NULL);
-			i = 0;
-			while (i < cnt)
-			{
-				line[i] == buf[i]
-				i++;
-			}
-			line[i] = '\0';
-			if (cnt <= BUFFER_SIZE)
-			{
-				head = (char *)malloc(BUFFER_SIZE - cnt);
-				//if (head == NULL)
-				//	return (NULL);
-				i = 0;
-				while (buf[cnt] != '\0')
-				{
-					head[i] = buf[cnt];
-					i++;
-					cnt++;
-				}
-			}
-			return (line);
-		}
-		cnt++;
+		buf[n] = '\0';
+		search_flag = search_kaigyo(line, head, buf);
+	}
+	free(buf);
+	// 終端文字まで行ったらflagが-1なので全てfreeして終了
+	if (search_flag == -1)
+	{
+		free(line);
+		free(buf);
 	}
 	return (line);
 }

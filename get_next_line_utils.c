@@ -3,16 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:08:56 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/02 12:40:54 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/04 21:44:27 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
 static	char	*store(char const *pre, char const *suf, char *ret);
+
+int	*ft_strchr_index(const char *s, int c)
+{
+	char	char_c;
+	int		index;
+
+	char_c = (char)c;
+	while (*s)
+	{
+		if (*s == char_c)
+			return (index);
+		s++;
+		index++;
+	}
+	if (char_c == '\0' && *s == char_c)
+		return (index);
+	return (0);
+}
 
 size_t	ft_strlen(const char *s)
 {
