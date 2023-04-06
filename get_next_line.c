@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/06 23:33:22 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/07 08:53:23 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,15 @@
 // 0:改行が見つかったのでget_next_line終了
 // -1:終端文字まで行ったので全てのプロセス終了
 
-// cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 test_operation.c get_next_line.c get_next_line_utils.c
+// cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 test_operation.c get_next_line.c get_next_line_utils.c -fsanitize=address
 
-// あれっfdどこでも読み込まれてなくね？
+// serach_kaigyoでlineが改行部分で終わっておらず全部ブッ込まれてる
+// これ、str"n"joinみたいなやつじゃないとダメか
+
+// search_kaigyoでlineに格納したものがget_next_lineに戻ると中身入ってないですね、、、
+// ポインタのしょーもないミスだと思うが。。。
+
+
 
 #include "get_next_line.h"
 
@@ -56,11 +62,15 @@ int	search_kaigyo(char *line, char *head, char *buf)
 	char	*temp;
 
 	index = ft_strchr_index(buf, '\n');
+	printf("index=%d\n", index);
 	temp = ft_strjoin(line, buf);
+	printf("temp=%s\n", temp);
 	if (temp == NULL)
 		search_flag = -1;
+	// 他のポインタでアクセスできるようにlineをfree
 	free(line);
 	line = temp;
+	// tempはリユースするので、一旦nullで初期化
 	temp = NULL;
 	search_flag = 1;
 	if (buf[index] == '\n')
@@ -72,6 +82,9 @@ int	search_kaigyo(char *line, char *head, char *buf)
 	}
 	free(head);
 	head = temp;
+	printf("head=%s\n", head);
+	printf("search_flag=%d\n", search_flag);
+	printf("line1=%s\n", line);
 	return (search_flag);
 }
 
@@ -97,14 +110,18 @@ char	*get_next_line(int fd)
 		search_flag = 0;
 	while (search_flag == 1)
 	{
-		write(1, "check1\n", 6);
+		write(1, "check1\n", 7);
 		// read関数の返り値は読み込んだバイト数
-		n = read(0, buf, BUFFER_SIZE);
+		//n = read(0, buf, BUFFER_SIZE);
+		n = read(fd, buf, BUFFER_SIZE);
+		printf("buff=%s\n", buf);
 		if (n <= 0)
 			break ;
 		buf[n] = '\0';
 		search_flag = search_kaigyo(line, head, buf);
 	}
+	printf("line2=%s\n", line);
+	// bufに他の変数がアクセスできるように(mallocできるように)freeしておく
 	free(buf);
 	// 終端文字まで行ったらflagが-1なので全てfreeして終了
 	if (search_flag == -1)

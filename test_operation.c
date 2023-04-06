@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_operation.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:03 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/06 23:18:51 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/07 08:51:43 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,15 @@ int main(void)
 
     fd = open("./text.txt", O_RDONLY);
     i = 0;
-    while (i < 20)
+    while (i < 5)
     {
         line = get_next_line(fd);
+        printf("line=%s\n", line);
         close (fd);
         if (line == NULL)
             break;
-        printf("line= %s\n", line);
-        free(line);
+        //printf("line=%s\n", line);
+        //free(line);
         i++;
     }
     //system("leaks a.out");
