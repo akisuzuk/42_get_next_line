@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/04 23:04:31 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/06 23:33:22 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@
 
 // cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 test_operation.c get_next_line.c get_next_line_utils.c
 
+// あれっfdどこでも読み込まれてなくね？
+
 #include "get_next_line.h"
 
 int	search_kaigyo(char *line, char *head, char *buf)
@@ -81,7 +83,7 @@ char	*get_next_line(int fd)
 	int			search_flag;
 	size_t		n;
 
-	search_flag = 0;
+	search_flag = 1;
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	line = (char *)malloc(1);
@@ -95,6 +97,7 @@ char	*get_next_line(int fd)
 		search_flag = 0;
 	while (search_flag == 1)
 	{
+		write(1, "check1\n", 6);
 		// read関数の返り値は読み込んだバイト数
 		n = read(0, buf, BUFFER_SIZE);
 		if (n <= 0)

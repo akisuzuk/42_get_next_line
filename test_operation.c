@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:03 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/04 23:05:46 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/06 23:18:51 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main(void)
 
     fd = open("./text.txt", O_RDONLY);
     i = 0;
-    while (i < 10)
+    while (i < 20)
     {
         line = get_next_line(fd);
         close (fd);
