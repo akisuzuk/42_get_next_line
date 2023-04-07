@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:08:56 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/04 23:03:12 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/07 21:17:22 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ char	*ft_strdup(const char *s1)
 	return (ret);
 }
 
-static	char	*store(char const *pre, char const *suf, char *ret)
+static	char	*store(char const *pre, char const *suf,
+						char *ret, size_t index)
 {
 	size_t	i;
 	size_t	j;
@@ -49,7 +50,7 @@ static	char	*store(char const *pre, char const *suf, char *ret)
 		j++;
 	}
 	i = 0;
-	while (suf[i] != '\0')
+	while (i < index)
 	{
 		ret[j] = suf[i];
 		i++;
@@ -70,21 +71,19 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin_n(char const *s1, char const *s2, size_t index)
 {
 	char	*ret;
 	size_t	prelen;
-	size_t	suflen;
 
 	if (!s1 || !s2)
 		return (NULL);
 	prelen = ft_strlen(s1);
-	suflen = ft_strlen(s2);
-	ret = malloc(sizeof(char) * (prelen + suflen + 1));
+	ret = malloc(sizeof(char) * (prelen + index + 1));
 	if (!ret)
 		return (NULL);
-	ret = store(s1, s2, ret);
-	ret[prelen + suflen] = '\0';
+	ret = store(s1, s2, ret, index);
+	ret[prelen + index] = '\0';
 	return (ret);
 }
 
