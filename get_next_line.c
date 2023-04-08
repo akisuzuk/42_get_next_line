@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/08 18:44:38 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/08 19:41:04 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	search_kaigyo(char **line, char **head, char *buf)
 	search_flag = 1;
 	if (buf[index] == '\n')
 	{
+		if (**line != '\0')
+			*line = ft_strjoin_n(*line, "\n", 1);
 		temp = ft_strdup(buf + index + 1);
 		search_flag = 0;
 	}
@@ -57,7 +59,10 @@ char	*get_next_line(int fd)
 	}
 	buf = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (buf == NULL)
+	{
+		free(line);
 		search_flag = 0;
+	}
 	while (search_flag == 1)
 	{
 		n = read(fd, buf, BUFFER_SIZE);
