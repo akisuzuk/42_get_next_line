@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:03 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/08 19:43:10 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/08 19:44:17 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@
 //}
 
 // cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 test_operation.c get_next_line.c get_next_line_utils.c -fsanitize=address
-
 
 int main(void)
 {
