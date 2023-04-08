@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/07 22:09:45 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/08 11:55:19 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	search_kaigyo(char **line, char **head, char *buf)
 	char	*temp;
 
 	index = ft_strchr_index(buf, '\n');
-	//printf("index=%d\n", index);
+	printf("index=%d\n", index);
 	temp = ft_strjoin_n(*line, buf, index);
 	printf("temp=%s\n", temp);
 	if (temp == NULL)
@@ -73,17 +73,24 @@ int	search_kaigyo(char **line, char **head, char *buf)
 	search_flag = 1;
 	if (buf[index] == '\n')// || buf[index] == '\0')
 	{
+		write(1, "IN1\n", 4);
 		temp = ft_strdup(buf + index + 1);
 		if (temp == NULL)
 			search_flag = -1;
-		search_flag = 0;
+		else
+			search_flag = 0;
 	}
-	if (buf[index] == '\0')
-		search_flag = -1;
+	else
+	{
+		write(1, "IN2\n", 4);
+		temp = ft_strdup(buf + index + 1);
+		if (temp == NULL)
+			search_flag = -1;
+	}
 	free(*head);
 	*head = temp;
 	//printf("head=%s\n", *head);
-	//printf("search_flag=%d\n", search_flag);
+	printf("search_flag=%d\n", search_flag);
 	//printf("line1=%s\n", *line);
 	return (search_flag);
 }
@@ -95,9 +102,9 @@ char	*get_next_line(int fd)
 	char		*buf;
 	int			search_flag;
 	size_t		n;
+	int			i;
 
 	printf("start!\n");
-	search_flag = 1;
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	line = (char *)malloc(1);
@@ -105,29 +112,32 @@ char	*get_next_line(int fd)
 		return (NULL);
 	*line = '\0';
 	printf("head=%s\n", head);
+	search_flag = 1;
 	if (head)
 	{
 		printf("----------\n");
 		printf("hit!\n");
-		printf("index=%d\n", ft_strchr_index("xyz", '\n'));
 		search_flag = search_kaigyo(&line, &head, head);
 		printf("----------\n");
 	}
 	buf = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (buf == NULL)
 		search_flag = 0;
-	while (search_flag == 1)
+	i = 0;
+	while (search_flag == 1)// && i < 3)
 	{
-		write(1, "loop\n", 5);
+		write(1, "---loop---\n", 11);
+		printf("i=%d\n", i);
 		// read関数の返り値は読み込んだバイト数
 		//n = read(0, buf, BUFFER_SIZE);
 		n = read(fd, buf, BUFFER_SIZE);
-		//printf("buff=%s\n", buf);
 		if (n <= 0)
 			break ;
 		buf[n] = '\0';
+		printf("buff=%s\n", buf);
 		search_flag = search_kaigyo(&line, &head, buf);
 		//write(1, "loop\n", 6);
+		i++;
 	}
 	printf("line2=%s\n", line);
 	printf("head2=%s\n", head);
@@ -135,9 +145,10 @@ char	*get_next_line(int fd)
 	// bufに他の変数がアクセスできるように(mallocできるように)freeしておく
 	free(buf);
 	// 終端文字まで行ったらflagが-1なので全てfreeして終了
-	if (search_flag == -1 || (*line == '\0' && head == NULL))
+	if (search_flag == -1)// || (*line == '\0' && head == NULL))
 	{
 		free(line);
+		line = NULL;
 		free(head);
 		return (NULL);
 	}
