@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/08 11:55:19 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/08 11:56:55 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,7 @@ char	*get_next_line(int fd)
 	if (buf == NULL)
 		search_flag = 0;
 	i = 0;
-	while (search_flag == 1)// && i < 3)
+	while (search_flag == 1)
 	{
 		write(1, "---loop---\n", 11);
 		printf("i=%d\n", i);
@@ -137,7 +137,6 @@ char	*get_next_line(int fd)
 		printf("buff=%s\n", buf);
 		search_flag = search_kaigyo(&line, &head, buf);
 		//write(1, "loop\n", 6);
-		i++;
 	}
 	printf("line2=%s\n", line);
 	printf("head2=%s\n", head);
