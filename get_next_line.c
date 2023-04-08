@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/08 12:04:24 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/08 18:44:38 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	search_kaigyo(char **line, char **head, char *buf)
 	index = ft_strchr_index(buf, '\n');
 	temp = ft_strjoin_n(*line, buf, index);
 	if (temp == NULL)
-		search_flag = -1;
+		return (-1);
 	free(*line);
 	*line = temp;
 	temp = NULL;
@@ -29,16 +29,7 @@ int	search_kaigyo(char **line, char **head, char *buf)
 	if (buf[index] == '\n')
 	{
 		temp = ft_strdup(buf + index + 1);
-		if (temp == NULL)
-			search_flag = -1;
-		else
-			search_flag = 0;
-	}
-	else
-	{
-		temp = ft_strdup(buf + index + 1);
-		if (temp == NULL)
-			search_flag = -1;
+		search_flag = 0;
 	}
 	free(*head);
 	*head = temp;
@@ -71,12 +62,22 @@ char	*get_next_line(int fd)
 	{
 		n = read(fd, buf, BUFFER_SIZE);
 		if (n <= 0)
+		{
+			if (*line != '\0')
+			{
+				search_flag = 0;
+			}
+			else
+			{
+				search_flag = -1;
+			}
 			break ;
+		}
 		buf[n] = '\0';
 		search_flag = search_kaigyo(&line, &head, buf);
 	}
 	free(buf);
-	if (search_flag == -1)// || (*line == '\0' && head == NULL))
+	if (search_flag == -1)
 	{
 		free(line);
 		line = NULL;
