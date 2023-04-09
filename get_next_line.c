@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/09 10:58:18 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/09 21:06:54 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,16 @@ int	search_kaigyo(char **line, char **head, char *buf)
 		}
 		search_flag = 0;
 	}
+	//else
+	//{
+	//	temp = ft_strdup(buf + index + 1);
+	//	if (temp == NULL)
+	//	{
+	//		free(*line);
+	//		*line = NULL;
+	//		return (-1);
+	//	}
+	//}
 	free(*head);
 	*head = temp;
 	return (search_flag);
