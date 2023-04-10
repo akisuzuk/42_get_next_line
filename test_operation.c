@@ -6,28 +6,17 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:03 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/09 10:58:36 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/10 21:10:30 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "get_next_line.h"
 
-//int	main(int argc, char **argv)
-//{
-//	int		fd;
+// leak check
+// cc testoperation.c get_next_line.c get_next_line_utils.c leakdetect.c -D BUFFER_SIZE=42
 
-//	if (argc != 2)
-//		return (0);
-//	else
-//	{
-//		// 読み込み専用
-//		fd = open(argv[1], O_RDONLY);
-//		get_next_line(fd);
-//		close(fd);
-//		return (0);
-//	}
-//}
-
+// normal compile
 // cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 test_operation.c get_next_line.c get_next_line_utils.c -fsanitize=address
 
 
@@ -37,8 +26,8 @@ int main(void)
     char    *line;
     int     i;
 
-    fd = open("./text.txt", O_RDONLY);
-    //fd = open("./gnlTester/files/41_with_nl", O_RDONLY);
+    //fd = open("./text.txt", O_RDONLY);
+    fd = open("./gnlTester/files/41_with_nl", O_RDONLY);
     i = 0;
     while (i < 12)
     {
@@ -60,5 +49,7 @@ int main(void)
     }
     //system("leaks a.out");
     close (fd);
+
+
     return (0);
 }
