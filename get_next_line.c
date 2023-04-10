@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/10 21:32:14 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/11 08:43:56 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	search_kaigyo(char **line, char **head, char *buf)
 	search_flag = 1;
 	if (buf[index] == '\n')
 	{
+		printf("\nkaigyo\n");
 		if (**line != '\0')
 			*line = ft_strjoin_n(*line, "\n", 1);
 		temp = ft_strdup(buf + index + 1);
@@ -61,6 +62,7 @@ char	*get_next_line(int fd)
 	search_flag = 1;
 	if (head)
 	{
+		printf("head=%s\n", head);
 		search_flag = search_kaigyo(&line, &head, head);
 	}
 	buf = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
@@ -71,9 +73,11 @@ char	*get_next_line(int fd)
 	}
 	while (search_flag == 1)
 	{
+		printf("serch\n");
 		n = read(fd, buf, BUFFER_SIZE);
 		if (n <= 0)
 		{
+			printf("n=%zu\n", n);
 			if (*line != '\0')
 				search_flag = 0;
 			else
