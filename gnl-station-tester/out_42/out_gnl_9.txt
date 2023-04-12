@@ -1,0 +1,294 @@
+serch
+
+kaigyo
+
+search_flag = 0
+line =     ..
+
+    ..
+head=             "$$$$$e.
+             
+
+kaigyo
+
+search_flag = 0
+line =              "$$$$$e.
+
+             "$$$$$e.
+head=             
+serch
+
+kaigyo
+
+search_flag = 0
+line =                 "$$$$$$$e.
+
+                "$$$$$$$e.
+head=                   *$$$$$$$$
+serch
+
+kaigyo
+
+search_flag = 0
+line =                    *$$$$$$$$e
+
+                   *$$$$$$$$e
+head=              "ee..  ^*$$$$$$$b
+        
+
+kaigyo
+
+search_flag = 0
+line =               "ee..  ^*$$$$$$$b
+
+              "ee..  ^*$$$$$$$b
+head=        
+serch
+
+kaigyo
+
+search_flag = 0
+line =                 *$$$$$$$$$$$$$$$
+
+                *$$$$$$$$$$$$$$$
+head=                 
+serch
+
+kaigyo
+
+search_flag = 0
+line =                   *$$$$$$$$$$$$$b
+
+                  *$$$$$$$$$$$$$b
+head=                    "$$$$
+serch
+
+kaigyo
+
+search_flag = 0
+line =                     "$$$$$$$$$$$$.
+
+                    "$$$$$$$$$$$$.
+head=               $$$eeec3$$$$$$$$$
+serch
+
+kaigyo
+
+search_flag = 0
+line =                $$$eeec3$$$$$$$$$$$
+
+               $$$eeec3$$$$$$$$$$$
+head=                *$$$$$$$$$$$$$$$$$L
+   
+
+kaigyo
+
+search_flag = 0
+line =                 *$$$$$$$$$$$$$$$$$L
+
+                *$$$$$$$$$$$$$$$$$L
+head=   
+serch
+
+kaigyo
+
+search_flag = 0
+line =                  "$$$$$$$$$$$$$$$$$ ..eeee.
+
+                 "$$$$$$$$$$$$$$$$$ ..eeee.
+head= 
+serch
+serch
+
+kaigyo
+
+search_flag = 0
+line =                    "$$$$$$$$$$$$$$$$$$$$$$$$b
+
+                   "$$$$$$$$$$$$$$$$$$$$$$$$b
+head==c.                  $$$$$$$$$$$$$$$$$$
+serch
+
+kaigyo
+
+search_flag = 0
+line = =c.                  $$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+=c.                  $$$$$$$$$$$$$$$$$$$$$$$$$$$
+head=  *$$bc            d$$$$$$$$$$$$
+serch
+
+kaigyo
+
+search_flag = 0
+line =   *$$bc            d$$$$$$$$$$$$$$$$$$$$$$$$$$"
+
+  *$$bc            d$$$$$$$$$$$$$$$$$$$$$$$$$$"
+head=    "$$$$$be...e$$$$$$$$$$
+serch
+
+kaigyo
+
+search_flag = 0
+line =     "$$$$$be...e$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+
+    "$$$$$be...e$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+head=      *$$$$$$$$$$$$$$$$
+serch
+
+kaigyo
+
+search_flag = 0
+line =       *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$P*"
+
+      *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$P*"
+head=       ^$$$$$$$$$$$$$$$
+serch
+
+kaigyo
+
+search_flag = 0
+line =        ^$$$$$$$$$$$$$$$$$$$$$$$$$$$$F
+
+       ^$$$$$$$$$$$$$$$$$$$$$$$$$$$$F
+head=        $$$$$$$$$$$$$$$$$$$
+serch
+
+kaigyo
+
+search_flag = 0
+line =         $$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+
+        $$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+head=        $$$$$$$*"     $$$$$$$$$
+serch
+
+kaigyo
+
+search_flag = 0
+line =         $$$$$$$*"     $$$$$$$$$$$$$$
+
+        $$$$$$$*"     $$$$$$$$$$$$$$
+head=       $$$$$P"      .$$$$$$$$$$$$$$$
+serch
+
+kaigyo
+
+search_flag = 0
+line =        $$$$$P"      .$$$$$$$$$$$$$$$
+
+       $$$$$P"      .$$$$$$$$$$$$$$$
+head=      $$$$"        .$$$$$$$$$$$$$$$$
+    
+
+kaigyo
+
+search_flag = 0
+line =       $$$$"        .$$$$$$$$$$$$$$$$
+
+      $$$$"        .$$$$$$$$$$$$$$$$
+head=    
+serch
+
+kaigyo
+
+search_flag = 0
+line =     .$$*          .$$$$$$$$$$$$$$$$"
+
+    .$$*          .$$$$$$$$$$$$$$$$"
+head=   zP"   
+serch
+
+kaigyo
+
+search_flag = 0
+line =    zP"           .$$P**$$$$$$$$$$$"
+
+   zP"           .$$P**$$$$$$$$$$$"
+head=               
+serch
+
+kaigyo
+
+search_flag = 0
+line =                      z$$$$$$$$$$$P
+
+                     z$$$$$$$$$$$P
+head=                    d$
+serch
+
+kaigyo
+
+search_flag = 0
+line =                     d$$$$$$$$$$$P
+
+                    d$$$$$$$$$$$P
+head=                   $$$$*)$$$$$
+serch
+
+kaigyo
+
+search_flag = 0
+line =                    $$$$*)$$$$$$"
+
+                   $$$$*)$$$$$$"
+head=                 .$*"  d$$$$$$
+        
+
+kaigyo
+
+search_flag = 0
+line =                  .$*"  d$$$$$$
+
+                 .$*"  d$$$$$$
+head=        
+serch
+
+kaigyo
+
+search_flag = 0
+line =                      z$$$$$$"
+
+                     z$$$$$$"
+head=                    
+serch
+
+kaigyo
+
+search_flag = 0
+line =                     $$$$$$"
+
+                    $$$$$$"
+head=                  z$$$$P"
+        
+
+kaigyo
+
+search_flag = 0
+line =                   z$$$$P"
+
+                  z$$$$P"
+head=        
+serch
+
+kaigyo
+
+search_flag = 0
+line =                 .$$$$"
+
+                .$$$$"
+head=                ""
+
+
+kaigyo
+
+search_flag = 0
+line =                 ""
+
+                ""
+head=
+serch
+n=0
+
+search_flag = -1
+line = (null)

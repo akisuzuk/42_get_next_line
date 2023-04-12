@@ -1,0 +1,299 @@
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+n=0
+
+search_flag = -1
+line = (null)

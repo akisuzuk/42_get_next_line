@@ -1,0 +1,16 @@
+serch
+serch
+serch
+
+kaigyo
+
+search_flag = 0
+line = 0q
+
+0q
+head=
+serch
+n=0
+
+search_flag = -1
+line = (null)

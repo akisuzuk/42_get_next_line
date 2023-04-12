@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:03 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/10 21:10:30 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/12 23:06:04 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ int main(void)
     int     i;
 
     //fd = open("./text.txt", O_RDONLY);
-    fd = open("./gnlTester/files/41_with_nl", O_RDONLY);
+    //fd = open("./gnlTester/files/41_with_nl", O_RDONLY);
+    fd = open("./gnlTester/files/empty", O_RDONLY);
     i = 0;
     while (i < 12)
     {

@@ -1,0 +1,179 @@
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+
+kaigyo
+
+search_flag = 0
+line = brocoli moutarde tomate pomme de terre tournesol
+
+brocoli moutarde tomate pomme de terre tournesol
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+
+kaigyo
+
+search_flag = 0
+line = baignoire barbecue cabestan boussole
+
+baignoire barbecue cabestan boussole
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+
+kaigyo
+
+search_flag = 0
+line = crayon bleu
+
+crayon bleu
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=
+serch
+serch
+
+kaigyo
+
+search_flag = 0
+line = a
+
+a
+head=
+serch
+n=0
+
+search_flag = -1
+line = (null)

@@ -1,0 +1,749 @@
+serch
+
+kaigyo
+
+search_flag = 0
+line = Wikipédia l'encyclopédie libre
+
+Wikipédia l'encyclopédie libre
+head=
+Recherch
+
+kaigyo
+
+search_flag = 0
+line = 
+head=Recherch
+serch
+
+kaigyo
+
+search_flag = 0
+line = Rechercher dans Wikipédia
+
+Rechercher dans Wikipédia
+head=
+Créer un compte
+
+Outi
+
+kaigyo
+
+search_flag = 0
+line = 
+head=Créer un compte
+
+Outi
+
+kaigyo
+
+search_flag = 0
+line = Créer un compte
+
+Créer un compte
+head=
+Outi
+
+kaigyo
+
+search_flag = 0
+line = 
+head=Outi
+serch
+
+kaigyo
+
+search_flag = 0
+line = Outils personnelsreplié
+
+Outils personnelsreplié
+head=
+Accueil
+Portails th�
+
+kaigyo
+
+search_flag = 0
+line = 
+head=Accueil
+Portails th�
+
+kaigyo
+
+search_flag = 0
+line = Accueil
+
+Accueil
+head=Portails th�
+serch
+
+kaigyo
+
+search_flag = 0
+line = Portails thématiques
+
+Portails thématiques
+head=
+Article au hasard
+
+Contact
+
+Con
+
+kaigyo
+
+search_flag = 0
+line = 
+head=Article au hasard
+
+Contact
+
+Con
+
+kaigyo
+
+search_flag = 0
+line = Article au hasard
+
+Article au hasard
+head=
+Contact
+
+Con
+
+kaigyo
+
+search_flag = 0
+line = 
+head=Contact
+
+Con
+
+kaigyo
+
+search_flag = 0
+line = Contact
+
+Contact
+head=
+Con
+
+kaigyo
+
+search_flag = 0
+line = 
+head=Con
+serch
+
+kaigyo
+
+search_flag = 0
+line = Contribuer
+
+Contribuer
+head=
+Débuter sur Wikipédia
+
+--------
+
+kaigyo
+
+search_flag = 0
+line = 
+head=Débuter sur Wikipédia
+
+--------
+
+kaigyo
+
+search_flag = 0
+line = Débuter sur Wikipédia
+
+Débuter sur Wikipédia
+head=
+--------
+
+kaigyo
+
+search_flag = 0
+line = 
+head=--------
+serch
+serch
+
+kaigyo
+
+search_flag = 0
+line = -----------------------------------------------------------
+
+-----------------------------------------------------------
+head=Aide
+Communauté
+Modifications r
+
+kaigyo
+
+search_flag = 0
+line = Aide
+
+Aide
+head=Communauté
+Modifications r
+
+kaigyo
+
+search_flag = 0
+line = Communauté
+
+Communauté
+head=Modifications r
+serch
+
+kaigyo
+
+search_flag = 0
+line = Modifications récentes
+
+Modifications récentes
+head=Faire un don
+Outils
+Pages liées
+
+
+kaigyo
+
+search_flag = 0
+line = Faire un don
+
+Faire un don
+head=Outils
+Pages liées
+
+
+kaigyo
+
+search_flag = 0
+line = Outils
+
+Outils
+head=Pages liées
+
+
+kaigyo
+
+search_flag = 0
+line = Pages liées
+
+Pages liées
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = Suivi des pages liées
+
+Suivi des pages liées
+head=Téléverser un fic
+serch
+
+kaigyo
+
+search_flag = 0
+line = Téléverser un fichier
+
+Téléverser un fichier
+head=Pages spéciales
+Lien permanent
+Infor
+
+kaigyo
+
+search_flag = 0
+line = Pages spéciales
+
+Pages spéciales
+head=Lien permanent
+Infor
+
+kaigyo
+
+search_flag = 0
+line = Lien permanent
+
+Lien permanent
+head=Infor
+serch
+
+kaigyo
+
+search_flag = 0
+line = Informations sur la page
+
+Informations sur la page
+head=Citer cette page
+Élé
+
+kaigyo
+
+search_flag = 0
+line = Citer cette page
+
+Citer cette page
+head=Élé
+serch
+
+kaigyo
+
+search_flag = 0
+line = Élément Wikidata
+
+Élément Wikidata
+head=Modifier les liens interlang
+serch
+
+kaigyo
+
+search_flag = 0
+line = Modifier les liens interlangues
+
+Modifier les liens interlangues
+head=Imprimer / exporter
+Créer un livr
+
+kaigyo
+
+search_flag = 0
+line = Imprimer / exporter
+
+Imprimer / exporter
+head=Créer un livr
+serch
+
+kaigyo
+
+search_flag = 0
+line = Créer un livre
+
+Créer un livre
+head=Télécharger comme PDF
+Version imprimab
+
+kaigyo
+
+search_flag = 0
+line = Télécharger comme PDF
+
+Télécharger comme PDF
+head=Version imprimab
+serch
+
+kaigyo
+
+search_flag = 0
+line = Version imprimable
+
+Version imprimable
+head=Dans d’autres projets
+Wikimedia Commo
+
+kaigyo
+
+search_flag = 0
+line = Dans d’autres projets
+
+Dans d’autres projets
+head=Wikimedia Commo
+serch
+
+kaigyo
+
+search_flag = 0
+line = Wikimedia Commons
+
+Wikimedia Commons
+head=ArticleDiscussion
+LireModifierModifier 
+
+kaigyo
+
+search_flag = 0
+line = ArticleDiscussion
+
+ArticleDiscussion
+head=LireModifierModifier 
+serch
+
+kaigyo
+
+search_flag = 0
+line = LireModifierModifier le codeVoir l’historique
+
+LireModifierModifier le codeVoir l’historique
+head=---------------
+serch
+serch
+
+kaigyo
+
+search_flag = 0
+line = -----------------------------------------------------------
+
+-----------------------------------------------------------
+head=
+Brouette
+
+C’est un outil ergonomique
+
+kaigyo
+
+search_flag = 0
+line = 
+head=Brouette
+
+C’est un outil ergonomique
+
+kaigyo
+
+search_flag = 0
+line = Brouette
+
+Brouette
+head=
+C’est un outil ergonomique
+
+kaigyo
+
+search_flag = 0
+line = 
+head=C’est un outil ergonomique
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+
+kaigyo
+
+search_flag = 0
+line = C’est un outil ergonomique pour le transport de matériaux ou d’outils sur des terrains qui peuvent être accidentés mais nécessairement peu inclinés. Indispensable sur les chantiers, dans les fermes ou dans les jardins, elle facilite le déplacement de charges qui peuvent être lourdes ou encombrantes. Le principe du levier associé à la position du centre de gravité vers l’aplomb du point d’appui (la roue), lui confère une grande efficacité.
+
+C’est un outil ergonomique pour le transport de matériaux ou d’outils sur des terrains qui peuvent être accidentés mais nécessairement peu inclinés. Indispensable sur les chantiers, dans les fermes ou dans les jardins, elle facilite le déplacement de charges qui peuvent être lourdes ou encombrantes. Le principe du levier associé à la position du centre de gravité vers l’aplomb du point d’appui (la roue), lui confère une grande efficacité.
+head=
+Sommaire
+1	Éléments d’
+
+kaigyo
+
+search_flag = 0
+line = 
+head=Sommaire
+1	Éléments d’
+
+kaigyo
+
+search_flag = 0
+line = Sommaire
+
+Sommaire
+head=1	Éléments d’
+serch
+
+kaigyo
+
+search_flag = 0
+line = 1	Éléments d’histoire de la brouette
+
+1	Éléments d’histoire de la brouette
+head=1.1	La question de
+serch
+
+kaigyo
+
+search_flag = 0
+line = 1.1	La question des origines
+
+1.1	La question des origines
+head=1.2	Une diffusion assez lente
+1
+
+kaigyo
+
+search_flag = 0
+line = 1.2	Une diffusion assez lente
+
+1.2	Une diffusion assez lente
+head=1
+serch
+
+kaigyo
+
+search_flag = 0
+line = 1.3	La brouette dans les textes
+
+1.3	La brouette dans les textes
+head=2	Étude te
+serch
+
+kaigyo
+
+search_flag = 0
+line = 2	Étude technologique de la brouette
+
+2	Étude technologique de la brouette
+head=2.1	Analyse fon
+serch
+
+kaigyo
+
+search_flag = 0
+line = 2.1	Analyse fonctionnelle
+
+2.1	Analyse fonctionnelle
+head=2.1.1	Fonction principale, déf
+serch
+
+kaigyo
+
+search_flag = 0
+line = 2.1.1	Fonction principale, définition
+
+2.1.1	Fonction principale, définition
+head=2.1.2	Constitution de la solution 
+serch
+
+kaigyo
+
+search_flag = 0
+line = 2.1.2	Constitution de la solution « brouette »
+
+2.1.2	Constitution de la solution « brouette »
+head=2.1.3	Variantes – classif
+serch
+
+kaigyo
+
+search_flag = 0
+line = 2.1.3	Variantes – classification
+
+2.1.3	Variantes – classification
+head=2.2	Analyse mécanique
+2.2.1	La ro
+
+kaigyo
+
+search_flag = 0
+line = 2.2	Analyse mécanique
+
+2.2	Analyse mécanique
+head=2.2.1	La ro
+serch
+
+kaigyo
+
+search_flag = 0
+line = 2.2.1	La roue
+
+2.2.1	La roue
+head=2.2.2	Influence de la position longitud
+serch
+
+kaigyo
+
+search_flag = 0
+line = 2.2.2	Influence de la position longitudinale de la caisse
+
+2.2.2	Influence de la position longitudinale de la caisse
+head=2.2.3	Aptitude au bascu
+serch
+
+kaigyo
+
+search_flag = 0
+line = 2.2.3	Aptitude au basculement
+
+2.2.3	Aptitude au basculement
+head=2.2.4	Conclusions constructives
+3	P
+
+kaigyo
+
+search_flag = 0
+line = 2.2.4	Conclusions constructives
+
+2.2.4	Conclusions constructives
+head=3	P
+serch
+
+kaigyo
+
+search_flag = 0
+line = 3	Perspectives
+
+3	Perspectives
+head=4	Autour de la brouette
+4.1	Da
+
+kaigyo
+
+search_flag = 0
+line = 4	Autour de la brouette
+
+4	Autour de la brouette
+head=4.1	Da
+serch
+
+kaigyo
+
+search_flag = 0
+line = 4.1	Dans la littérature et dans les arts
+
+4.1	Dans la littérature et dans les arts
+head=4.2	Po
+serch
+
+kaigyo
+
+search_flag = 0
+line = 4.2	Polysémie du mot brouette
+
+4.2	Polysémie du mot brouette
+head=4.3	Jeux d’enfa
+serch
+
+kaigyo
+
+search_flag = 0
+line = 4.3	Jeux d’enfants (petits ou grands…)
+
+4.3	Jeux d’enfants (petits ou grands…)
+head=4.4	Décoration
+
+
+kaigyo
+
+search_flag = 0
+line = 4.4	Décoration
+
+4.4	Décoration
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 5	En images d’hier et d’aujourd’hui
+
+5	En images d’hier et d’aujourd’hui
+head=
+serch
+
+kaigyo
+
+search_flag = 0
+line = 6	Notes et références
+
+6	Notes et références
+head=7	Voir aussi
+7.1	B
+
+kaigyo
+
+search_flag = 0
+line = 7	Voir aussi
+
+7	Voir aussi
+head=7.1	B
+serch
+
+kaigyo
+
+search_flag = 0
+line = 7.1	Bibliographie
+
+7.1	Bibliographie
+head=7.2	Liens externes
+Éléments
+
+kaigyo
+
+search_flag = 0
+line = 7.2	Liens externes
+
+7.2	Liens externes
+head=Éléments
+serch
+
+kaigyo
+
+search_flag = 0
+line = Éléments d’histoire de la brouette
+
+Éléments d’histoire de la brouette
+head=La question d
+serch
+
+kaigyo
+
+search_flag = 0
+line = La question des origines
+
+La question des origines
+head=
+Variantes selon le nombre de 
+
+kaigyo
+
+search_flag = 0
+line = 
+head=Variantes selon le nombre de 
+serch
+
+kaigyo
+
+search_flag = 0
+line = Variantes selon le nombre de roues
+
+Variantes selon le nombre de roues
+head=Si la brouette selon son étymologie
+serch
+serch
+serch
+serch
+serch
+
+kaigyo
+
+search_flag = 0
+line = Si la brouette selon son étymologie a deux roues, c’est surtout lorsqu’elle n’en a qu’une qu’elle se caractérise comme « brouette. » Toutefois, quand elle a deux roues, celles-ci sont coaxiales.
+
+Si la brouette selon son étymologie a deux roues, c’est surtout lorsqu’elle n’en a qu’une qu’elle se caractérise comme « brouette. » Toutefois, quand elle a deux roues, celles-ci sont coaxiales.
+head=Critiques : La brouette à deux roues
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+serch
+
+kaigyo
+
+search_flag = 0
+line = Critiques : La brouette à deux roues permet de plus grandes contenances, plus stable elle peut se conduire d’une seule main mais elle est très difficile, voire éprouvante, à mener sur les terrains accidentés tandis que la brouette à une roue se joue des irrégularités du terrain. Par ailleurs la place nécessaire pour manœuvrer la brouette à deux roues dépend de la largeur de l’essieu.
+
+Critiques : La brouette à deux roues permet de plus grandes contenances, plus stable elle peut se conduire d’une seule main mais elle est très difficile, voire éprouvante, à mener sur les terrains accidentés tandis que la brouette à une roue se joue des irrégularités du terrain. Par ailleurs la place nécessaire pour manœuvrer la brouette à deux roues dépend de la largeur de l’essieu.
+head=
+serch
+n=0
+
+search_flag = -1
+line = (null)
