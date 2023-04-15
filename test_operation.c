@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:03 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/15 15:42:16 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/15 23:36:36 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,17 @@ int main(void)
     //fd = open("./gnlTester/files/empty", O_RDONLY);
     fd = open("./gnl-station-tester/test/1-brouette.txt", O_RDONLY);
     i = 0;
-    while (i < 12)
+    //while (i < 12)
+    while (i >= 0)
     {
-	    printf("=============\n");
         line = get_next_line(fd);
         if (line)
         {
-            printf("NOT break!\n");
             printf("LINE=%s\n", line);
         }
         else
         {
-            printf("break!\n");
+            printf("---break!---\n");
             break;
         }
         //printf("line=%s\n", line);
