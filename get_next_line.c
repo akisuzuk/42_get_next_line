@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/15 20:22:44 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/15 20:37:50 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,21 +63,21 @@ static	int	search_kaigyo(char **line, char **head, char *buf)
 	return (search_flag);
 }
 
-//static	int	n_judge(ssize_t *n, char **line, char **buf, char **head)
-//{
-//	if (*n <= 0)
-//	{
-//		if (**line != '\0')
-//			return (0);
-//		else
-//			return (-1);
-//	}
-//	else
-//	{
-//		*(buf[*n]) = '\0';
-//		return (search_kaigyo(line, head, *buf));
-//	}
-//}
+static	int	n_judge(ssize_t *n, char **line, char **buf, char **head)
+{
+	if (*n <= 0)
+	{
+		if (**line != '\0')
+			return (0);
+		else
+			return (-1);
+	}
+	else
+	{
+		(*buf)[*n] = '\0';
+		return (search_kaigyo(line, head, *buf));
+	}
+}
 
 char	*get_next_line(int fd)
 {
@@ -100,19 +100,7 @@ char	*get_next_line(int fd)
 	while (search_flag == 1)
 	{
 		n = read(fd, buf, BUFFER_SIZE);
-		//search_flag = n_judge(&n, &line, &buf, &head);
-		if (n <= 0)
-		{
-			if (*line != '\0')
-				search_flag = 0;
-			else
-				search_flag = -1;
-		}
-		else
-		{
-			buf[n] = '\0';
-			search_flag = search_kaigyo(&line, &head, buf);
-		}
+		search_flag = n_judge(&n, &line, &buf, &head);
 	}
 	finish(&buf, &line, &head, search_flag);
 	return (line);
