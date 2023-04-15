@@ -1,5 +1,0 @@
-serch
-n=0
-
-search_flag = -1
-line = (null)
