@@ -99,7 +99,7 @@ int main(void)
 		 /* 3 */ gnl(fd, "987654321098765432109876543210987654321098\n");
 		 /* 4 */ gnl(fd, "01234567890123456789012345678901234567890\n");
 		 /* 5 */ gnl(fd, "9876543210987654321098765432109876543210\n");
-		 /* 6 */ gnl(fd, NULL);) cout << ENDL; close(fd);	
+		 /* 6 */ gnl(fd, NULL);) cout << ENDL; close(fd);
 
 	title("files/alternate_line_nl_no_nl: ")
 	fd = open("files/alternate_line_nl_no_nl", O_RDWR);
