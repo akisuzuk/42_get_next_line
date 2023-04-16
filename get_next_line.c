@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/15 23:42:56 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/16 14:43:46 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ static	char	*makebuf(char **line, int *search_flag)
 	if (buf == NULL)
 	{
 		free(*line);
+		*line = NULL;
 		*search_flag = -1;
 	}
 	return (buf);
