@@ -1,14 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 20:46:20 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/15 23:49:12 by akisuzuk         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include "get_next_line.h"
 
@@ -49,6 +39,7 @@ static	char	*makebuf(char **line, int *search_flag)
 	if (buf == NULL)
 	{
 		free(*line);
+		*line = NULL;
 		*search_flag = -1;
 	}
 	return (buf);
