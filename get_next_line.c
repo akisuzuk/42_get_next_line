@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/18 00:45:49 by akisuzuk          #+#    #+#             */
+/*   Updated: 2023/04/18 01:01:51 by akisuzuk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "get_next_line.h"
 
@@ -35,7 +45,7 @@ static	char	*makebuf(char **line, int *search_flag)
 {
 	char	*buf;
 
-	buf = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
+	buf = (char *)malloc((BUFFER_SIZE + 1UL) * sizeof(char));
 	if (buf == NULL)
 	{
 		free(*line);
@@ -82,7 +92,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	line = (char *)malloc(1);
+	line = (char *)malloc(sizeof(char) * 1);
 	if (line == NULL)
 		return (NULL);
 	*line = '\0';
