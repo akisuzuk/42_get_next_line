@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:52:17 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/19 19:44:24 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/19 22:11:19 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 
 // BUFFER_SIZE macro
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE	(10)
+#  define BUFFER_SIZE	(42)
 # endif
 
 char	*ft_strdup(const char *s1);
