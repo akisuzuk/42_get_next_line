@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:52:17 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/07 21:17:48 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/19 19:44:24 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@
 
 //open用
 # include <fcntl.h>
+
+// BUFFER_SIZE macro
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE	(10)
+# endif
 
 char	*ft_strdup(const char *s1);
 char	*ft_strjoin_n(char const *s1, char const *s2, size_t index);
