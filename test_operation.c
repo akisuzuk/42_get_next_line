@@ -6,7 +6,7 @@
 /*   By: akisuzuk <akisuzuk@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:46:03 by akisuzuk          #+#    #+#             */
-/*   Updated: 2023/04/19 22:14:20 by akisuzuk         ###   ########.fr       */
+/*   Updated: 2023/04/22 17:05:53 by akisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,27 @@ int main(void)
     //fd = open("./text.txt", O_RDONLY);
     //fd = open("./gnlTester/files/41_with_nl", O_RDONLY);
     //fd = open("./gnlTester/files/empty", O_RDONLY);
-    fd = open("./gnl-station-tester/test/1-brouette.txt", O_RDONLY);
-    i = 0;
+    //fd = open("./gnl-station-tester/test/1-brouette.txt", O_RDONLY);
+
+
+    // store keyboard input infd(not completed)
+    /*
+    fd = 1; // 標準出力
+    char buf[1024];
+    ssize_t nbytes;
+    printf("キーボード入力をfdに書き込みます\n");
+    nbytes = read(STDIN_FILENO, buf, sizeof(buf)); // 標準入力から読み込み
+    write(fd, buf, nbytes); // fdに書き込み
+    */
+
+    i = 1;
     //while (i < 12)
     while (i >= 0)
     {
         line = get_next_line(fd);
         if (line)
         {
-            printf("LINE=%s\n", line);
+            printf("%d: %s\n", i, line);
         }
         else
         {
